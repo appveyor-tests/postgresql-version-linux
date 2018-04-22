@@ -5,7 +5,7 @@ tests:
 - sh |
     PKG_VERSION=$(ls /var/cache/apt/archives/powershell*|head -n1|tr '~' '-')
     PWSH_VERSION=$(pwsh -Command 'Write-Host $PSVersionTable.PSVersion')
-    echo "Installed package: $PKG_VERSION"
+    echo 'Installed package:' $PKG_VERSION
     echo "\$PSVersionTable Version: $PWSH_VERSION"
     if [[ "$PKG_VERSION" == *"$PWSH_VERSION"* ]]; then
         echo ok;
