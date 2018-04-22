@@ -6,11 +6,11 @@ tests:
     PKG_VERSION=$(ls /var/cache/apt/archives/powershell*|head -n1|tr '~' '-')
     PWSH_VERSION=$(pwsh -Command 'Write-Host $PSVersionTable.PSVersion')
     echo 'Installed package:' $PKG_VERSION
-    echo "\$PSVersionTable Version: $PWSH_VERSION"
+    echo '$PSVersionTable Version:' $PWSH_VERSION
     if [[ "$PKG_VERSION" == *"$PWSH_VERSION"* ]]; then
         echo ok;
     else
-        echo "Versions are not the same!"
+        echo 'Versions are not the same!'
         return 1
     fi
 
