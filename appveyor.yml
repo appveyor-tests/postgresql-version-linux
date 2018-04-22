@@ -1,7 +1,7 @@
 init:
 - appveyor version
 
-tests:
+test_script:
 - sh |
     PKG_VERSION=$(ls /var/cache/apt/archives/powershell*|head -n1|tr '~' '-')
     PWSH_VERSION=$(pwsh -Command 'Write-Host $PSVersionTable.PSVersion')
