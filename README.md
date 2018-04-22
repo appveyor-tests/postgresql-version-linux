@@ -1,2 +1,2 @@
-# postgresql-version-linux
+# Powershell-version-linux
 Check that version of Powershell package is same as in `$PSVersionTable`
