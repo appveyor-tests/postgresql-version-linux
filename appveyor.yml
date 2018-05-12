@@ -1,5 +1,7 @@
 init:
 - appveyor version
+- sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
+- sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
 - sudo ACCEPT_EULA=Y apt-get -qq -y update && sudo ACCEPT_EULA=Y apt-get -qq -y upgrade
 test_script:
 - sh: |
