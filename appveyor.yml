@@ -2,7 +2,7 @@ init:
 - appveyor version
 - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
 - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
-- sudo ACCEPT_EULA=Y apt-get -qq -y update && sudo ACCEPT_EULA=Y apt-get -qq -y upgrade
+
 test_script:
 - sh: |
     PKG_VERSION=$(ls /var/cache/apt/archives/powershell*|head -n1|tr '~' '-')
