@@ -30,6 +30,6 @@ test_script:
         Start-Sleep -m 200
     }
 
-    exit 1
+    exit 0
 
 build: off
