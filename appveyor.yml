@@ -15,5 +15,21 @@ test_script:
         echo 'Versions are not the same!'
         return 1
     fi
+- ps: |
+    [Environment]::GetEnvironmentVariables()
+
+    Write-Error -Message "Error: Too many input values."
+    [Console]::Error.WriteLine("This is the output to StdErr")
+
+    for($i = 0; $i -lt 10; $i++) {
+        Write-Host "тест $i" -ForegroundColor Yellow -NoNewline
+        Start-Sleep -m 200
+        Write-Host " ... " -ForegroundColor Green -NoNewline
+        Start-Sleep -m 200
+        Write-Host " ... " -ForegroundColor Red
+        Start-Sleep -m 200
+    }
+
+    exit 1
 
 build: off
