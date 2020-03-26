@@ -1,7 +1,7 @@
 init:
 - appveyor version
 - lsb_release -a
-- sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
+#- sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
 - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
 - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
 
